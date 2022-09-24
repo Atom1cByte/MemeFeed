@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/home_styles.css') }}">
+{% endblock %}
+{% block content %}
+    <main>
+        <div class="center">
+            <select class="start-select">
+                <option value="r/memes">r/memes</option>
+                <option value="r/funny">r/funny</option>
+                <option value="r/animememes">r/animememes</option>
+                <option value="r/AdviceAnimals">r/AdviceAnimals</option>
+                <option value="r/MemeEconomy">r/MemeEconomy</option>
+                <option value="r/dankmemes">r/dankmemes</option>
+                <option value="r/MinecraftMemes">r/MinecraftMemes</option>
+                <option value="r/programmingmemes">r/programmingmemes</option>
+                <option value="r/softwaregore">r/softwaregore</option>
+            </select>
+            <button class="start-btn" onclick="(() => {window.open('/xxx', '_self')})()">TAKE ME TO THE MEMES</button>
+        </div>
+    </main>
+{% endblock %}
