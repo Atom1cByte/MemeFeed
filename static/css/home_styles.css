@@ -2,6 +2,7 @@
     --btn-color: red;
     --select-color: rgb(0, 247, 255);
     --select-border-color: rgb(0, 210, 217);
+    --add-color: 
 }
 
 .center {
@@ -11,12 +12,13 @@
     transform: translate(-50%, -50%)
 }
 .start-btn {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: monospace;
     border: none;
     border-radius: 1em;
-    padding: 1vh;
+    padding: 1.6vh;
     font-size: 2vw;
     background-color: var(--btn-color);
+    cursor: pointer;
 }
 .start-select {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -26,4 +28,14 @@
     padding: 1vh;
     font-size: 1vw;
     background-color: var(--select-color);
+}
+.add-button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-color: var(--select-border-color);
+    border-width: 0.2em;
+    border-radius: 1em;
+    padding: 1vh;
+    font-size: 1vw;
+    background-color: var(--select-color);
+    cursor: pointer;
 }

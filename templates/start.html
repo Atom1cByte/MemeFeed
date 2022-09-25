@@ -6,18 +6,31 @@
 {% block content %}
     <main>
         <div class="center">
-            <select class="start-select">
-                <option value="r/memes">r/memes</option>
-                <option value="r/funny">r/funny</option>
-                <option value="r/animememes">r/animememes</option>
-                <option value="r/AdviceAnimals">r/AdviceAnimals</option>
-                <option value="r/MemeEconomy">r/MemeEconomy</option>
-                <option value="r/dankmemes">r/dankmemes</option>
-                <option value="r/MinecraftMemes">r/MinecraftMemes</option>
-                <option value="r/programmingmemes">r/programmingmemes</option>
-                <option value="r/softwaregore">r/softwaregore</option>
-            </select>
-            <button class="start-btn" onclick="(() => {window.open('/xxx', '_self')})()">TAKE ME TO THE MEMES</button>
+            <span id="selects">
+                <select class="start-select">
+                    <option value="r/memes">r/memes</option>
+                    <option value="r/funny">r/funny</option>
+                    <option value="r/animememes">r/animememes</option>
+                    <option value="r/AdviceAnimals">r/AdviceAnimals</option>
+                    <option value="r/MemeEconomy">r/MemeEconomy</option>
+                    <option value="r/dankmemes">r/dankmemes</option>
+                    <option value="r/MinecraftMemes">r/MinecraftMemes</option>
+                    <option value="r/programmingmemes">r/programmingmemes</option>
+                    <option value="r/softwaregore">r/softwaregore</option>
+                </select>
+            </span>
+
+            <button id="add" class="add-button">+</button>
+            <button class="start-btn" onclick="(() => {
+                var selects = document.querySelectorAll('select.start-select');
+                var request = '/memes?types=';
+                selects.forEach(select => {
+                    var meme = select.value.substr(2, select.value.length);
+                    request+=meme+','
+                });
+                window.open(request, '_self')
+            })()">TAKE ME TO THE MEMES</button>
         </div>
     </main>
+    <script src="{{ url_for('static', path='js/add_select.js') }}"></script>
 {% endblock %}
