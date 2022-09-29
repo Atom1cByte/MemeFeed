@@ -45,7 +45,7 @@ def gen_list(types: list[str]) -> list[str]:
             headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'}
         )
         links = resp.json()["data"]["children"]
-        [meme_list.append([type_, link["data"]["title"], link["data"]["url"]]) for link in links if link["data"]["url"].endswith((".jpg", ".gif", ".png"))]
+        [meme_list.append([type_, link["data"]["title"], link["data"]["url"]]) for i, link in enumerate(links) if link["data"]["url"].endswith((".jpg", ".gif", ".png")) and i != 0]
     
     random.shuffle(meme_list)
     return meme_list

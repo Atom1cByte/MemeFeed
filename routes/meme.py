@@ -17,6 +17,7 @@ async def meme(request: Request, meme_id: int):
         "meme_id": meme_id
     })
 
+
 # --- Helpers --- #
 
 

@@ -1,0 +1,25 @@
+:root {
+    --btn-bg-color: rgb(232, 232, 232);
+}
+
+body{height:100vh}
+
+.left-arrow, .right-arrow {
+    width: 4em;
+    border: none;
+    margin: 0 auto;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+}
+
+.btn-container {
+    cursor: pointer;
+}

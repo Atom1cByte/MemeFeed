@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Redirecting...{% endblock %}
 {% block content %}
-    <p hidden>{{ meme_list }}</p>
     <script>
-        localStorage.setItem("meme_list", {{ meme_list|safe }})
-        window.location.href = "/meme/1/"
+        json_string = JSON.stringify({{ meme_list|safe }});
+        localStorage.setItem("meme_list", json_string);
+        window.location.href = "/meme/1/";
     </script>
 {% endblock %}
