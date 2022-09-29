@@ -1,8 +1,9 @@
 :root {
     --btn-bg-color: rgb(232, 232, 232);
+    --btn-hover-bg-color: rgb(209, 209, 209);
 }
 
-body{height:100vh}
+body{height:100vh; background-color: brown;}
 
 .left-arrow, .right-arrow {
     width: 4em;
@@ -20,6 +21,6 @@ main {
     align-items: center;
 }
 
-.btn-container {
-    cursor: pointer;
+.btn-container:hover {
+    background-color: var(--btn-hover-bg-color);
 }

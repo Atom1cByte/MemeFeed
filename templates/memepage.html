@@ -10,13 +10,14 @@
                 <embed src="{{ url_for('static', path='svg/arrow-left-solid.svg') }}" />
             </button>
         </span>
+        <span id="img-container"></span>
         <span class="right-btn-container btn-container">
             <button class="right-arrow">
                 <embed src="{{ url_for('static', path='svg/arrow-right-solid.svg') }}" />
             </button>
         </span>
         
-        <!-- <span id="img-container"></span> -->
+        
         <script src="{{ url_for('static', path='js/display_image.js') }}" meme_id="{{ meme_id|safe }}"></script>
     </main>
 {% endblock %}
